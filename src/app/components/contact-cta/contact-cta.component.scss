@@ -1,0 +1,11 @@
+.contact-cta { padding: 6rem 0; background: var(--lime); }
+.contact-cta h2 { max-width: 700px; margin: 1rem 0; font-family: 'Manrope', sans-serif; font-size: clamp(2.5rem, 6vw, 5.5rem); line-height: 1; letter-spacing: -.06em; }
+.contact-cta p { max-width: 420px; color: var(--green); line-height: 1.6; margin-bottom: 2rem; }
+.contact-cta .primary-button { background: var(--ink); }
+.contact-layout { display: grid; grid-template-columns: 1fr .7fr; gap: 5rem; align-items: end; }
+.contact-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; }
+.contact-email { color: var(--ink); font-weight: 700; }
+address { display: flex; flex-direction: column; gap: .45rem; font-style: normal; color: var(--green); line-height: 1.5; }
+address strong { color: var(--ink); font-family: 'Manrope', sans-serif; font-size: 1.4rem; }
+address span:last-child { margin-top: .7rem; font-size: .85rem; }
+@media (max-width: 760px) { .contact-layout { grid-template-columns: 1fr; gap: 3rem; } }

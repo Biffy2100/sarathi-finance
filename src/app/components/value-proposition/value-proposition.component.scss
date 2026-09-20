@@ -1,0 +1,10 @@
+.value-section { background: var(--green); color: white; }
+.value-section .eyebrow { color: var(--lime); }
+.value-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 6rem; margin-top: 4rem; }
+.value-intro { display: flex; flex-direction: column; justify-content: space-between; min-height: 280px; }
+.value-section .section-copy { color: rgba(255,255,255,.7); max-width: 360px; }
+.value-mark { color: var(--lime); font-family: 'Manrope', sans-serif; font-size: 4rem; }
+.value-list > div { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding: 1.5rem 0; border-top: 1px solid rgba(255,255,255,.25); }
+.value-list strong { font-family: 'Manrope', sans-serif; font-size: 1.4rem; }
+.value-list span { color: rgba(255,255,255,.65); line-height: 1.6; }
+@media (max-width: 760px) { .value-grid { grid-template-columns: 1fr; gap: 3rem; } .value-intro { min-height: 180px; } .value-list > div { grid-template-columns: 1fr; gap: .5rem; } }
