@@ -1,13 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap');
 
 :root { --ink: #172b25; --muted: #62716b; --paper: #f7f8f3; --surface: #fff; --sage: #dce9dc; --green: #1f5d49; --lime: #c8df6b; --line: #dfe6dd; --content-width: 1180px; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 1.125rem; line-height: 1.6; }
 button, a { font: inherit; }
 a { color: inherit; text-decoration: none; }
+.primary-button { display: inline-flex; gap: .8rem; align-items: center; padding: .95rem 1.3rem; border-radius: 2rem; background: var(--green); color: white; font-weight: 600; }
 .container { width: min(var(--content-width), calc(100% - 3rem)); margin: 0 auto; }
-.eyebrow { color: var(--green); font-size: .75rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
-.section-heading { max-width: 620px; margin: .8rem 0 0; font-family: 'Manrope', sans-serif; font-size: clamp(2rem, 4vw, 3.8rem); line-height: 1.08; letter-spacing: -.04em; }
+.section { padding: 5rem 0; }
+.eyebrow { color: var(--green); font-size: .95rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.brand-name { color: var(--green); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.08em; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; white-space: nowrap; }
+.brand-rupee { font-family: 'DM Sans', sans-serif; font-size: .82em; font-weight: 700; letter-spacing: 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.value-section .brand-name { color: var(--lime); }
+.section-heading { max-width: 620px; margin: .6rem 0 0; font-family: 'Manrope', sans-serif; font-size: 2.5rem; line-height: 1.15; letter-spacing: 0; }
 .section-copy { color: var(--muted); line-height: 1.7; }
+@media (max-width: 760px) { .section { padding: 3.75rem 0; } .section-heading { font-size: 2rem; } }
 @media (max-width: 640px) { .container { width: min(100% - 2rem, var(--content-width)); } }

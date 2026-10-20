@@ -1,11 +1,12 @@
-.site-footer { padding: 4rem 0 1.5rem; background: var(--ink); color: white; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; padding-bottom: 4rem; }
-.site-footer .brand { display: inline-flex; }
-.site-footer .brand-logo { display: block; width: 190px; line-height: 0; }
-.site-footer .brand-logo img { display: block; width: 100%; height: auto; mix-blend-mode: screen; }
-.site-footer p { max-width: 280px; color: rgba(255,255,255,.6); line-height: 1.6; }
-.footer-grid > div:not(:first-child) { display: flex; flex-direction: column; gap: .8rem; color: rgba(255,255,255,.65); font-size: .85rem; }
+.site-footer { padding: 2.25rem 0 1.25rem; background: var(--ink); color: white; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; align-items: start; padding-bottom: 1.5rem; }
+.footer-brand-row { display: flex; align-items: center; gap: 1rem; }
+.site-footer .footer-brand { display: inline-flex; flex: 0 0 150px; }
+.footer-brand-logo { position: relative; display: block; width: 150px; height: 54px; overflow: hidden; background: white; line-height: 0; }
+.footer-brand-logo img { position: absolute; top: 50%; left: 0; display: block; width: 100%; height: auto; transform: translateY(-50%); }
+.site-footer p { max-width: 340px; margin: 0; color: rgba(255,255,255,.75); font-size: .95rem; line-height: 1.5; }
+.footer-grid > div:not(:first-child) { display: flex; flex-direction: column; gap: .8rem; color: rgba(255,255,255,.65); font-size: .95rem; }
 .footer-grid > div:not(:first-child) strong { color: white; margin-bottom: .5rem; }
 .footer-grid a:hover { color: var(--lime); }
-.footer-bottom { display: flex; justify-content: space-between; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.2); color: rgba(255,255,255,.5); font-size: .75rem; }
-@media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-grid > div:first-child { grid-column: 1 / -1; } .footer-bottom { flex-direction: column; } }
+.footer-bottom { display: flex; justify-content: space-between; gap: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,.2); color: rgba(255,255,255,.65); font-size: .9rem; }
+@media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-brand-row { grid-column: 1 / -1; gap: .75rem; } .site-footer .footer-brand { flex-basis: 118px; } .footer-brand-logo { width: 118px; height: 48px; } .footer-bottom { flex-direction: column; } }
