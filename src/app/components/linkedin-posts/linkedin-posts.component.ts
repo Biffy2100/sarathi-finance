@@ -1,0 +1,23 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-linkedin-posts',
+  standalone: true,
+  templateUrl: './linkedin-posts.component.html',
+  styleUrl: './linkedin-posts.component.scss'
+})
+export class LinkedInPostsComponent {
+  readonly posts = [
+    { title: 'Celebrating the Har Ghar MFD initiative by AssetPlus', url: 'https://lnkd.in/p/dbv2VuVg' },
+    { title: 'Thinking of Retiring Early and Achieving FIRE (Financial Independence, Retire Early)?', url: 'https://lnkd.in/p/dND-vmpC' },
+    { title: 'Why SIF (Specialised Investment Fund)?', url: 'https://lnkd.in/p/dvAm2ayV' },
+    { title: 'Is D.I.Y. investing on online platforms worth it?', url: 'https://lnkd.in/p/dbv2VuVg' },
+    { title: 'Partner Prestige 2026', url: 'https://lnkd.in/p/dAseFDY6' },
+    { title: 'Are you top of your finances?', url: 'https://lnkd.in/p/dR2-6TnP' },
+    { title: 'Key Benefits of Global Mutual Funds', url: 'https://lnkd.in/p/dicYXuXS' },
+    { title: 'Partner Prestige 2025', url: 'https://lnkd.in/p/ds9AfKKy' },
+    { title: 'Term Insurance. What NOT to do?', url: 'https://lnkd.in/p/dazpZDfh' },
+    { title: 'Five SIP Facts that you may be aware of', url: 'https://lnkd.in/p/dK7pgHBf' },
+    { title: 'Dilemma solved: Personal health insurance vs. corporate health plan?', url: 'https://lnkd.in/p/d5m_7esB' },
+  ];
+}

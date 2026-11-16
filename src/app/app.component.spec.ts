@@ -22,4 +22,22 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('app-hero')).toBeTruthy();
     expect(compiled.querySelector('app-footer')).toBeTruthy();
   });
+
+  it('should render the LinkedIn posts after the founder section', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    const about = compiled.querySelector('#about');
+    const linkedin = compiled.querySelector('#linkedin');
+    const contact = compiled.querySelector('#contact');
+
+    expect(about).toBeTruthy();
+    expect(linkedin).toBeTruthy();
+    expect(contact).toBeTruthy();
+    expect(about!.compareDocumentPosition(linkedin!) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(linkedin!.compareDocumentPosition(contact!) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+
+    const postLinks = linkedin!.querySelectorAll('a[target="_blank"][rel="noopener noreferrer"]');
+    expect(postLinks.length).toBe(11);
+  });
 });

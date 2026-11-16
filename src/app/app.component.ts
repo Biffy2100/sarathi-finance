@@ -5,6 +5,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ValuePropositionComponent } from './components/value-proposition/value-proposition.component';
 import { FounderComponent } from './components/founder/founder.component';
+import { LinkedInPostsComponent } from './components/linkedin-posts/linkedin-posts.component';
 import { ContactCtaComponent } from './components/contact-cta/contact-cta.component';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -17,6 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ProductsComponent,
     ValuePropositionComponent,
     FounderComponent,
+    LinkedInPostsComponent,
     ContactCtaComponent,
     FooterComponent,
   ],
@@ -39,7 +41,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     const revealTargets = rootElement.querySelectorAll<HTMLElement>(
       '.hero-copy, .hero-art, .stats > div, .section-top > *, .product-grid article, '
       + '.value-section > .container > .section-heading, .value-intro, .value-list > div, '
-      + '.founder-grid > *, .contact-layout > *',
+      + '.founder-grid > *, .post-grid article, .contact-layout > *',
     );
     const revealGroups = new Map<HTMLElement, number>();
 

@@ -1,0 +1,11 @@
+.linkedin-section { background: var(--sage); }
+.section-top { display: flex; justify-content: space-between; gap: 2rem; align-items: end; margin-bottom: 2rem; }
+.section-top .section-copy { max-width: 360px; }
+.post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .85rem; }
+article { display: flex; min-height: 220px; flex-direction: column; align-items: flex-start; padding: 1.4rem; border: 1px solid var(--line); background: var(--surface); }
+.post-source { color: var(--green); font-size: .9rem; font-weight: 700; }
+h3 { margin: 1.25rem 0 1.5rem; font-family: 'Manrope', sans-serif; font-size: 1.2rem; line-height: 1.4; }
+article a { display: inline-flex; gap: .5rem; align-items: center; margin-top: auto; color: var(--green); font-weight: 700; }
+article a:focus-visible { outline: 2px solid var(--green); outline-offset: 4px; }
+@media (max-width: 960px) { .post-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 760px) { .section-top { display: block; } .section-top .section-copy { margin-top: 1rem; } .post-grid { grid-template-columns: 1fr; } }
