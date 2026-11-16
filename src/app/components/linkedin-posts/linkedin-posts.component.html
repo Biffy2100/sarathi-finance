@@ -8,6 +8,11 @@
     <div class="post-grid">
       @for (post of posts; track post.title) {
         <article>
+          @if (post.image) {
+            <div class="post-image">
+              <img [src]="post.image" [alt]="'Image preview for ' + post.title" loading="lazy" decoding="async" />
+            </div>
+          }
           <span class="post-source">LinkedIn</span>
           <h3>{{ post.title }}</h3>
           <a [href]="post.url" target="_blank" rel="noopener noreferrer"
