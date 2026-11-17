@@ -1,1 +1,34 @@
-<section id="hero" class="hero"><div class="container hero-grid"><div class="hero-copy"><span class="eyebrow">Guide for financial freedom</span><h1>Plan today for a more <em>secure tomorrow.</em></h1><p class="section-copy"><span class="brand-name"><span class="sr-only">Sarathi</span><span class="brand-visual" aria-hidden="true">SA<span class="brand-rupee">₹</span>ATHI</span></span> helps individuals improve financial literacy, make sound decisions, and build a secure financial future through expert guidance and personalised financial planning.</p><div class="hero-actions"><a class="primary-button" href="#contact">Talk to Sujit <span>↗</span></a><a class="secondary-link" href="#solutions">Explore services</a></div></div><div class="hero-art"><img src="assets/sujit-singasane.jpg" alt="Sujit Singasane, founder of Sarathi" /></div></div><div class="container stats"><div><strong>22+</strong><span>Years of corporate experience</span></div><div><strong>4+</strong><span>Years in personal finance</span></div><div><strong>8</strong><span>Financial service areas</span></div><div><strong>F.I.R.E</strong><span>Proud member of the community</span></div></div></section>
+<section id="hero" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Guide for financial freedom</span>
+      <div class="hero-message" [class.is-sliding]="isSliding" aria-live="off" aria-atomic="true">
+        <h1>{{ activeSlide.titleLead }} <em>{{ activeSlide.titleAccent }}</em></h1>
+        <p class="section-copy">
+          @if (activeSlide.brandPrefix) {
+            <span class="brand-name"><span class="sr-only">Sarathi</span><span class="brand-visual" aria-hidden="true">SA<span class="brand-rupee">₹</span>ATHI</span></span>
+          }
+          {{ activeSlide.description }}
+        </p>
+      </div>
+      <div class="hero-actions">
+        <a class="primary-button" href="#contact">Talk to Sujit <span>↗</span></a>
+        <a class="secondary-link" href="#solutions">Explore services</a>
+      </div>
+      <div class="hero-carousel-controls" role="group" aria-label="Hero message controls">
+        <button type="button" (click)="previousSlide()" aria-label="Previous message">←</button>
+        <span class="slide-count" aria-hidden="true">{{ activeSlideIndex + 1 }} / {{ slides.length }}</span>
+        <button type="button" (click)="nextSlide()" aria-label="Next message">→</button>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="assets/sujit-singasane.jpg" alt="Sujit Singasane, founder of Sarathi" />
+    </div>
+  </div>
+  <div class="container stats">
+    <div><strong>22+</strong><span>Years of corporate experience</span></div>
+    <div><strong>4+</strong><span>Years in personal finance</span></div>
+    <div><strong>8</strong><span>Financial service areas</span></div>
+    <div><strong>F.I.R.E</strong><span>Proud member of the community</span></div>
+  </div>
+</section>
