@@ -1,0 +1,21 @@
+<section id="testimonials" class="section testimonials-section">
+  <div class="container">
+    <span class="eyebrow">Client testimonials</span>
+    <div class="section-top">
+      <h2 class="section-heading">What clients value most.</h2>
+      <p class="section-copy">Clear guidance, long-term thinking, and a plan that feels relevant to real life.</p>
+    </div>
+    <div class="testimonial-grid">
+      @for (testimonial of testimonials; track testimonial.name) {
+        <article>
+          <div class="quote-mark" aria-hidden="true">“</div>
+          <p>{{ testimonial.quote }}</p>
+          <div class="testimonial-meta">
+            <strong>{{ testimonial.name }}</strong>
+            <span>{{ testimonial.detail }}</span>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

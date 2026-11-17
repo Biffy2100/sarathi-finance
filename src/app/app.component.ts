@@ -8,6 +8,7 @@ import { FounderComponent } from './components/founder/founder.component';
 import { LinkedInPostsComponent } from './components/linkedin-posts/linkedin-posts.component';
 import { ContactCtaComponent } from './components/contact-cta/contact-cta.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { FooterComponent } from './components/footer/footer.component';
     FounderComponent,
     LinkedInPostsComponent,
     ContactCtaComponent,
+    TestimonialsComponent,
     FooterComponent,
   ],
   templateUrl: './app.component.html',
@@ -41,7 +43,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     const revealTargets = rootElement.querySelectorAll<HTMLElement>(
       '.hero-copy, .hero-art, .stats > div, .section-top > *, .product-grid article, '
       + '.value-section > .container > .section-heading, .value-intro, .value-list > div, '
-      + '.founder-grid > *, .post-grid article, .contact-layout > *',
+      + '.founder-grid > *, .post-grid article, .testimonial-grid article, .contact-layout > *',
     );
     const revealGroups = new Map<HTMLElement, number>();
 

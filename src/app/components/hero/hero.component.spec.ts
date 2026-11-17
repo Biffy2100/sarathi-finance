@@ -14,12 +14,17 @@ describe('HeroComponent', () => {
     const component = fixture.componentInstance;
 
     expect(component.activeSlide.titleLead).toBe('Plan today for a more');
+    expect(fixture.nativeElement.querySelector('.hero-art img')?.getAttribute('src'))
+      .toBe('assets/hero-financial-security.jpg');
 
     tick(7_000);
     fixture.detectChanges();
 
     expect(component.activeSlide.titleLead).toBe('Goal-based');
     expect(component.isSliding).toBeTrue();
+    expect(fixture.nativeElement.querySelector('.hero-art img')?.getAttribute('src'))
+      .toBe('assets/hero-goal-based-planning.jpg');
+    expect(fixture.nativeElement.querySelector('.hero-art')?.classList.contains('is-sliding')).toBeTrue();
     expect(fixture.nativeElement.querySelector('h1')?.textContent).toContain('Planning');
     expect(fixture.nativeElement.querySelector('.rotation-toggle')).toBeNull();
 

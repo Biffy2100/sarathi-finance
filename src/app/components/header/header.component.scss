@@ -1,4 +1,4 @@
-.site-header { position: sticky; top: 0; z-index: 10; padding: .65rem 0; background: rgba(247,248,243,.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
+.site-header { position: sticky; top: 0; z-index: 30; padding: .65rem 0; background: rgba(247,248,243,.96); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
 .brand { display: flex; align-items: center; white-space: nowrap; }
 .brand-logo { position: relative; display: block; width: 220px; height: 58px; overflow: hidden; line-height: 0; }
@@ -11,7 +11,8 @@ nav a:focus-visible, .mobile-menu-toggle:focus-visible { outline: 2px solid var(
 .menu-icon span { width: 100%; height: 2px; border-radius: 2px; background: currentColor; transition: transform 180ms ease; }
 .menu-icon.is-open span:first-child { transform: translateY(.3rem) rotate(45deg); }
 .menu-icon.is-open span:last-child { transform: translateY(-.3rem) rotate(-45deg); }
-.header-action { flex: 0 0 auto; padding: .7rem 1rem; border: 1px solid var(--green); border-radius: 2rem; color: var(--green); font-size: .95rem; white-space: nowrap; }
+.header-action { display: inline-flex; align-items: center; gap: .6rem; flex: 0 0 auto; padding: .7rem 1rem; border: 1px solid var(--green); border-radius: 2rem; color: var(--green); font-size: .95rem; white-space: nowrap; }
+.whatsapp-icon { width: 1.05rem; height: 1.05rem; fill: currentColor; }
 @media (max-width: 760px) {
   .header-inner { position: relative; gap: .75rem; }
   nav { position: absolute; top: calc(100% + .65rem); right: 0; left: 0; display: none; flex-direction: column; gap: 0; padding: .5rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--paper); box-shadow: 0 1rem 2rem rgba(23,43,37,.12); }

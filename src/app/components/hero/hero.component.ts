@@ -5,6 +5,8 @@ interface HeroSlide {
   titleLead: string;
   titleAccent: string;
   description: string;
+  image: string;
+  imageAlt: string;
   brandPrefix?: boolean;
 }
 
@@ -26,22 +28,44 @@ export class HeroComponent implements OnInit, OnDestroy {
       titleLead: 'Plan today for a more',
       titleAccent: 'secure tomorrow.',
       description: 'helps individuals improve financial literacy, make sound decisions, and build a secure financial future through expert guidance and personalised financial planning.',
+      image: 'assets/hero-financial-security.jpg',
+      imageAlt: 'A money bag and calculator representing financial planning',
       brandPrefix: true,
     },
     {
       titleLead: 'Goal-based',
       titleAccent: 'Planning',
       description: 'Sarathi aligns goals with specific life milestones, rather than chasing market returns, and tracks progress periodically until each goal is reached.',
+      image: 'assets/hero-goal-based-planning.jpg',
+      imageAlt: 'Coins stacked beneath a target, representing goal-based planning',
     },
     {
       titleLead: 'Smart Selection of',
-      titleAccent: 'Mutual Fund',
+      titleAccent: 'Mutual Funds',
       description: 'Sarathi selects mutual fund schemes to match your financial goals, time horizon, and risk tolerance using a structured approach based on risk ratios and rolling returns.',
+      image: 'assets/hero-smart-fund-selection.jpg',
+      imageAlt: 'Financial adviser pointing to savings as a client plans investments',
     },
     {
       titleLead: 'Wealth',
       titleAccent: 'Protection',
       description: 'Sarathi helps identify risks and protect your savings from sudden financial shocks.',
+      image: 'assets/hero-wealth-protection.avif',
+      imageAlt: 'A family protected under an umbrella',
+    },
+    {
+      titleLead: 'Work toward',
+      titleAccent: 'Financial Freedom',
+      description: 'Build the knowledge and confidence to make informed financial decisions and move closer to the future you want.',
+      image: 'assets/hero-financial-freedom.png',
+      imageAlt: 'The words Financial Freedom with a broken chain and birds in flight',
+    },
+    {
+      titleLead: 'Plan for',
+      titleAccent: 'Financial Independence',
+      description: 'With thoughtful planning and steady progress, create more freedom to choose how you live and work.',
+      image: 'assets/hero-financial-independence.jpg',
+      imageAlt: 'A woman standing in a field at sunrise with her arms raised',
     },
   ];
 

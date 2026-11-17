@@ -11,7 +11,7 @@ export class LinkedInPostsComponent {
     { title: 'Celebrating the Har Ghar MFD initiative by AssetPlus', url: 'https://lnkd.in/p/dbv2VuVg', image: 'assets/linkedin-har-ghar.jpg' },
     { title: 'Thinking of Retiring Early and Achieving FIRE (Financial Independence, Retire Early)?', url: 'https://lnkd.in/p/dND-vmpC', image: 'assets/linkedin-fire-retirement.jpg' },
     { title: 'Why SIF (Specialised Investment Fund)?', url: 'https://lnkd.in/p/dvAm2ayV' },
-    { title: 'Is D.I.Y. investing on online platforms worth it?', url: 'https://lnkd.in/p/dbv2VuVg', image: 'assets/linkedin-har-ghar.jpg' },
+    { title: 'Is D.I.Y. investing on online platforms worth it?', url: 'https://lnkd.in/p/dbv2VuVg' },
     { title: 'Partner Prestige 2026', url: 'https://lnkd.in/p/dAseFDY6', image: 'assets/linkedin-partner-prestige-2026.jpg' },
     { title: 'Are you top of your finances?', url: 'https://lnkd.in/p/dR2-6TnP' },
     { title: 'Key Benefits of Global Mutual Funds', url: 'https://lnkd.in/p/dicYXuXS', image: 'assets/linkedin-global-mutual-funds.jpg' },

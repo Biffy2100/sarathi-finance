@@ -6,7 +6,7 @@
         <h1>{{ activeSlide.titleLead }} <em>{{ activeSlide.titleAccent }}</em></h1>
         <p class="section-copy">
           @if (activeSlide.brandPrefix) {
-            <span class="brand-name"><span class="sr-only">Sarathi</span><span class="brand-visual" aria-hidden="true">SA<span class="brand-rupee">₹</span>ATHI</span></span>
+            <span class="hero-brand" aria-label="Sarathi">SARATHI</span>
           }
           {{ activeSlide.description }}
         </p>
@@ -21,8 +21,8 @@
         <button type="button" (click)="nextSlide()" aria-label="Next message">→</button>
       </div>
     </div>
-    <div class="hero-art">
-      <img src="assets/sujit-singasane.jpg" alt="Sujit Singasane, founder of Sarathi" />
+    <div class="hero-art" [class.is-sliding]="isSliding">
+      <img [src]="activeSlide.image" [alt]="activeSlide.imageAlt" />
     </div>
   </div>
   <div class="container stats">

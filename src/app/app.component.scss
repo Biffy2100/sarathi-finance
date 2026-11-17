@@ -1,5 +1,5 @@
-:host { display: block; overflow: hidden; }
-.credentials-marquee { overflow: hidden; padding: .8rem 0; border-block: 1px solid rgba(200,223,107,.35); background: var(--green); color: var(--paper); }
+:host { display: block; }
+.credentials-marquee { overflow: hidden; padding: .35rem 0 .25rem; border-block: 1px solid rgba(200,223,107,.35); background: var(--green); color: var(--paper); }
 .credentials-track { display: flex; width: max-content; animation: credentials-scroll 22s linear infinite; }
 .credentials-group { display: flex; flex: 0 0 auto; align-items: center; gap: 2rem; padding-right: 2rem; font-size: 1rem; font-weight: 600; white-space: nowrap; }
 .credentials-group span + span::before { content: '•'; margin-right: 2rem; color: var(--lime); }

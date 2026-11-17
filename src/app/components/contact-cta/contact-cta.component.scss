@@ -4,6 +4,10 @@
 .contact-cta .primary-button { background: var(--ink); }
 .contact-layout { display: grid; grid-template-columns: 1fr .7fr; gap: 3.5rem; align-items: end; }
 .contact-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; }
+.whatsapp-contact { display: inline-flex; align-items: center; gap: .55rem; padding: .8rem 1rem; border: 1px solid var(--green); border-radius: 2rem; color: var(--green); font-weight: 700; }
+.whatsapp-contact:hover { background: rgba(31,93,73,.08); }
+.whatsapp-contact:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+.whatsapp-icon { width: 1.25rem; height: 1.25rem; fill: currentColor; }
 .contact-email { color: var(--ink); font-weight: 700; }
 address { display: flex; flex-direction: column; gap: .45rem; font-style: normal; color: var(--green); line-height: 1.5; }
 address strong { color: var(--ink); font-family: 'Manrope', sans-serif; font-size: 1.4rem; }

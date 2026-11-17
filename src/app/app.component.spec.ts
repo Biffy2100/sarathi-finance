@@ -39,7 +39,10 @@ describe('AppComponent', () => {
 
     const postLinks = linkedin!.querySelectorAll('a[target="_blank"][rel="noopener noreferrer"]');
     expect(postLinks.length).toBe(11);
-    expect(linkedin!.querySelectorAll('.post-image img').length).toBe(7);
+    expect(linkedin!.querySelectorAll('.post-image img').length).toBe(6);
+    const diyPost = Array.from(linkedin!.querySelectorAll('article'))
+      .find(article => article.querySelector('h3')?.textContent?.includes('D.I.Y. investing'));
+    expect(diyPost?.querySelector('.post-image')).toBeNull();
     expect(linkedin!.textContent).not.toContain('Image preview unavailable');
   });
 });
