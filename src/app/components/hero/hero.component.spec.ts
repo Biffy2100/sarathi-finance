@@ -15,7 +15,7 @@ describe('HeroComponent', () => {
 
     expect(component.activeSlide.titleLead).toBe('Plan today for a more');
     expect(fixture.nativeElement.querySelector('.hero-art img')?.getAttribute('src'))
-      .toBe('assets/hero-financial-security.jpg');
+      .toBe('assets/hero-wealth-protection.avif');
 
     tick(7_000);
     fixture.detectChanges();

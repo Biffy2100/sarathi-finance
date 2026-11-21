@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '../../translate.pipe';
 
 @Component({
   selector: 'app-linkedin-posts',
   standalone: true,
+  imports: [TranslatePipe],
   templateUrl: './linkedin-posts.component.html',
   styleUrl: './linkedin-posts.component.scss'
 })

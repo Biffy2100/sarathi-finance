@@ -1,6 +1,6 @@
 <section id="linkedin" class="section linkedin-section">
   <div class="container">
-    <span class="eyebrow">Blogs</span>
+    <span class="eyebrow">{{ 'Blogs' | t }}</span>
     <div class="section-top">
       <h2 class="section-heading">Ideas and insights for your financial journey.</h2>
       <p class="section-copy">Explore Sujit’s writing on investing, insurance, and building financial independence.</p>
@@ -13,11 +13,11 @@
               <img [src]="post.image" [alt]="'Image preview for ' + post.title" loading="lazy" decoding="async" />
             </div>
           }
-          <span class="post-source">Blog</span>
-          <h3>{{ post.title }}</h3>
+          <span class="post-source">{{ 'Blog' | t }}</span>
+          <h3>{{ post.title | t }}</h3>
           <a [href]="post.url" target="_blank" rel="noopener noreferrer"
              [attr.aria-label]="'Read ' + post.title + ' (opens in a new tab)'">
-            Read article <span aria-hidden="true">↗</span>
+            {{ 'Read article' | t }} <span aria-hidden="true">↗</span>
           </a>
         </article>
       }

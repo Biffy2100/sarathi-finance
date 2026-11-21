@@ -1,14 +1,22 @@
 <section id="hero" class="hero">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <span class="eyebrow">Guide for financial freedom</span>
+      <span class="eyebrow hero-brand-lockup">
+        <span class="brand-name">
+          <span class="sr-only">Sarathi</span>
+          <span class="brand-visual" aria-hidden="true">SA<span class="brand-rupee">₹</span>ATHI</span>
+        </span>
+        <span>{{ 'Guide for financial freedom' | t }}</span>
+      </span>
       <div class="hero-message" [class.is-sliding]="isSliding" aria-live="off" aria-atomic="true">
-        <h1>{{ activeSlide.titleLead }} <em>{{ activeSlide.titleAccent }}</em></h1>
+        <h1>{{ activeSlide.titleLead | t }} <em>{{ activeSlide.titleAccent | t }}</em></h1>
         <p class="section-copy">
           @if (activeSlide.brandPrefix) {
-            <span class="hero-brand" aria-label="Sarathi">SARATHI</span>
+            <span class="brand-name hero-brand" aria-label="Sarathi">
+              <span class="brand-visual" aria-hidden="true">SA<span class="brand-rupee">₹</span>ATHI</span>
+            </span>
           }
-          {{ activeSlide.description }}
+          {{ activeSlide.description | t }}
         </p>
       </div>
       <div class="hero-actions">

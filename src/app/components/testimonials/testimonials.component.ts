@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '../../translate.pipe';
 
 @Component({
   selector: 'app-testimonials',
   standalone: true,
+  imports: [TranslatePipe],
   templateUrl: './testimonials.component.html',
   styleUrl: './testimonials.component.scss'
 })

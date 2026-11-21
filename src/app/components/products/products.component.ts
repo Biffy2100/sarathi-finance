@@ -1,4 +1,4 @@
 import { Component } from '@angular/core';
-
-@Component({ selector: 'app-products', standalone: true, templateUrl: './products.component.html', styleUrl: './products.component.scss' })
+import { TranslatePipe } from '../../translate.pipe';
+@Component({ selector: 'app-products', standalone: true, imports: [TranslatePipe], templateUrl: './products.component.html', styleUrl: './products.component.scss' })
 export class ProductsComponent {}

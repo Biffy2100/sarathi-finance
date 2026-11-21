@@ -1,9 +1,25 @@
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="#hero" aria-label="Sarathi home"><span class="brand-logo"><img src="assets/sarathi-logo.jpg" alt="Sarathi - Guide for Financial Freedom" /></span></a>
+    <a class="brand" href="#hero" aria-label="Sarathi home">
+      <span class="brand-logo">
+        <span class="brand-name" aria-hidden="true">
+          <span class="brand-visual">SA<span class="brand-rupee">₹</span>ATHI</span>
+        </span>
+        <span class="brand-tagline">Guide for Financial Freedom</span>
+      </span>
+    </a>
     <nav id="primary-navigation" [class.is-open]="menuOpen" aria-label="Primary navigation">
-      <a href="#hero" (click)="closeMenu()">Home</a><a href="#solutions" (click)="closeMenu()">Services</a><a href="#why-us" (click)="closeMenu()">Our Approach</a><a href="#about" (click)="closeMenu()">About Us</a><a href="#linkedin" (click)="closeMenu()">Blogs</a><a href="#contact" (click)="closeMenu()">Contact</a><a href="#testimonials" (click)="closeMenu()">Testimonials</a>
+      <a href="#hero" (click)="closeMenu()">{{ 'Home' | t }}</a><a href="#solutions" (click)="closeMenu()">{{ 'Services' | t }}</a><a href="#why-us" (click)="closeMenu()">{{ 'Our Approach' | t }}</a><a href="#about" (click)="closeMenu()">{{ 'About Us' | t }}</a><a href="#linkedin" (click)="closeMenu()">{{ 'Blogs' | t }}</a><a href="#contact" (click)="closeMenu()">{{ 'Contact' | t }}</a><a href="#testimonials" (click)="closeMenu()">{{ 'Client testimonials' | t }}</a>
     </nav>
+    <select
+      class="language-switcher"
+      [ngModel]="translations.language()"
+      (ngModelChange)="setLanguage($event)"
+      aria-label="Select language">
+      <option value="en">EN</option>
+      <option value="hi">हिंदी</option>
+      <option value="mr">मराठी</option>
+    </select>
     <button
       class="mobile-menu-toggle"
       type="button"
