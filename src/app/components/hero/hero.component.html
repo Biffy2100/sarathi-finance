@@ -6,10 +6,9 @@
           <span class="sr-only">Sarathi</span>
           <span class="brand-visual" aria-hidden="true">SA<span class="brand-rupee">₹</span>ATHI</span>
         </span>
-        <span>{{ 'Guide for financial freedom' | t }}</span>
       </span>
       <div class="hero-message" [class.is-sliding]="isSliding" aria-live="off" aria-atomic="true">
-        <h1>{{ activeSlide.titleLead | t }} <em>{{ activeSlide.titleAccent | t }}</em></h1>
+        <h1>{{ activeSlide.titleLead | t }}{{ activeSlide.titleAccent ? ' ' : '' }}@if (activeSlide.titleAccent) { <em>{{ activeSlide.titleAccent | t }}</em> }</h1>
         <p class="section-copy">
           @if (activeSlide.brandPrefix) {
             <span class="brand-name hero-brand" aria-label="Sarathi">
@@ -30,7 +29,9 @@
       </div>
     </div>
     <div class="hero-art" [class.is-sliding]="isSliding">
-      <img [src]="activeSlide.image" [alt]="activeSlide.imageAlt" />
+      @if (activeSlide.image) {
+        <img [src]="activeSlide.image" [alt]="activeSlide.imageAlt ?? ''" />
+      }
     </div>
   </div>
   <div class="container stats">

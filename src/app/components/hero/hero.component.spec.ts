@@ -13,9 +13,11 @@ describe('HeroComponent', () => {
     fixture.detectChanges();
     const component = fixture.componentInstance;
 
-    expect(component.activeSlide.titleLead).toBe('Plan today for a more');
+    expect(component.activeSlide.titleLead).toBe('Guide for Financial Freedom');
     expect(fixture.nativeElement.querySelector('.hero-art img')?.getAttribute('src'))
-      .toBe('assets/hero-wealth-protection.avif');
+      .toBe('assets/hero-financial-freedom.png');
+    expect(fixture.nativeElement.querySelector('h1')?.textContent?.trim())
+      .toBe('Guide for Financial Freedom');
 
     tick(7_000);
     fixture.detectChanges();
@@ -23,9 +25,10 @@ describe('HeroComponent', () => {
     expect(component.activeSlide.titleLead).toBe('Goal-based');
     expect(component.isSliding).toBeTrue();
     expect(fixture.nativeElement.querySelector('.hero-art img')?.getAttribute('src'))
-      .toBe('assets/hero-goal-based-planning.jpg');
+      .toBe('assets/hero-goal-based-planning-slide.jpg');
     expect(fixture.nativeElement.querySelector('.hero-art')?.classList.contains('is-sliding')).toBeTrue();
-    expect(fixture.nativeElement.querySelector('h1')?.textContent).toContain('Planning');
+    expect(fixture.nativeElement.querySelector('h1')?.textContent?.replace(/\s+/g, ' ').trim())
+      .toBe('Goal-based Planning');
     expect(fixture.nativeElement.querySelector('.rotation-toggle')).toBeNull();
 
     component.nextSlide();
@@ -36,4 +39,30 @@ describe('HeroComponent', () => {
     expect(component.activeSlideIndex).toBe(1);
     fixture.destroy();
   }));
+
+  it('should show the requested slide order, descriptions, and images', () => {
+    const fixture = TestBed.createComponent(HeroComponent);
+    const component = fixture.componentInstance;
+
+    expect(component.slides.map(({ titleLead, titleAccent }) => [titleLead, titleAccent].filter(Boolean).join(' '))).toEqual([
+      'Guide for Financial Freedom',
+      'Goal-based Planning',
+      'Smart Selection of Mutual Fund',
+      'Wealth Protection',
+    ]);
+    expect(component.slides[1].description)
+      .toBe('Sarathi aligns goals to specific life milestones rather than chasing market returns and tracking them periodically till Goal is reached');
+    expect(component.slides[2].description)
+      .toBe('Sarathi selects Mutual Fund Schemes matching your Financial Goals, Time Horizon and Risk Tolerance using a structured method of matching Risk Ratio and Rolling Returns');
+    expect(component.slides[3].description)
+      .toBe('Sarathi helps to identify risks and assists in protecting your savings from sudden financial shocks');
+    expect(component.slides.map(({ image }) => image)).toEqual([
+      'assets/hero-financial-freedom.png',
+      'assets/hero-goal-based-planning-slide.jpg',
+      'assets/hero-smart-selection-mutual-fund.jpg',
+      'assets/hero-wealth-protection.png',
+    ]);
+
+    fixture.destroy();
+  });
 });

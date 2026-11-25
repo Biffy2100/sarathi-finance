@@ -4,10 +4,10 @@ import { TranslatePipe } from '../../translate.pipe';
 
 interface HeroSlide {
   titleLead: string;
-  titleAccent: string;
+  titleAccent?: string;
   description: string;
-  image: string;
-  imageAlt: string;
+  image?: string;
+  imageAlt?: string;
   brandPrefix?: boolean;
 }
 
@@ -27,33 +27,32 @@ export class HeroComponent implements OnInit, OnDestroy {
 
   readonly slides: HeroSlide[] = [
     {
-      titleLead: 'Plan today for a more',
-      titleAccent: 'secure tomorrow.',
+      titleLead: 'Guide for Financial Freedom',
       description: 'helps individuals improve financial literacy, make sound decisions, and build a secure financial future through expert guidance and personalised financial planning.',
-      image: 'assets/hero-wealth-protection.avif',
-      imageAlt: 'A family sheltered beneath an umbrella, representing financial protection',
+      image: 'assets/hero-financial-freedom.png',
+      imageAlt: 'Financial freedom represented by a broken chain and birds at sunrise',
       brandPrefix: true,
     },
     {
       titleLead: 'Goal-based',
       titleAccent: 'Planning',
-      description: 'Sarathi aligns goals with specific life milestones, rather than chasing market returns, and tracks progress periodically until each goal is reached.',
-      image: 'assets/hero-goal-based-planning.jpg',
+      description: 'Sarathi aligns goals to specific life milestones rather than chasing market returns and tracking them periodically till Goal is reached',
+      image: 'assets/hero-goal-based-planning-slide.jpg',
       imageAlt: 'Coins stacked beneath a target, representing goal-based planning',
     },
     {
       titleLead: 'Smart Selection of',
-      titleAccent: 'Mutual Funds',
-      description: 'Sarathi selects mutual fund schemes to match your financial goals, time horizon, and risk tolerance using a structured approach based on risk ratios and rolling returns.',
-      image: 'assets/hero-smart-fund-selection.jpg',
+      titleAccent: 'Mutual Fund',
+      description: 'Sarathi selects Mutual Fund Schemes matching your Financial Goals, Time Horizon and Risk Tolerance using a structured method of matching Risk Ratio and Rolling Returns',
+      image: 'assets/hero-smart-selection-mutual-fund.jpg',
       imageAlt: 'Financial adviser pointing to savings as a client plans investments',
     },
     {
-      titleLead: 'Work toward',
-      titleAccent: 'Financial Freedom',
-      description: 'Build the knowledge and confidence to make informed financial decisions and move closer to the future you want.',
-      image: 'assets/FinancialFree.jpeg',
-      imageAlt: 'A woman enjoying freedom in a wheat field',
+      titleLead: 'Wealth',
+      titleAccent: 'Protection',
+      description: 'Sarathi helps to identify risks and assists in protecting your savings from sudden financial shocks',
+      image: 'assets/hero-wealth-protection.png',
+      imageAlt: 'Hands holding a rupee-marked money bag, representing wealth protection',
     },
   ];
 
