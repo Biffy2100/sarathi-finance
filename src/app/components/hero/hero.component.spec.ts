@@ -51,17 +51,32 @@ describe('HeroComponent', () => {
       'Wealth Protection',
     ]);
     expect(component.slides[1].description)
-      .toBe('Sarathi aligns goals to specific life milestones rather than chasing market returns and tracking them periodically till Goal is reached');
+      .toBe('aligns goals to specific life milestones rather than chasing market returns and tracking them periodically till Goal is reached');
     expect(component.slides[2].description)
-      .toBe('Sarathi selects Mutual Fund Schemes matching your Financial Goals, Time Horizon and Risk Tolerance using a structured method of matching Risk Ratio and Rolling Returns');
+      .toBe('selects Mutual Fund Schemes matching your Financial Goals, Time Horizon and Risk Tolerance using a structured method of matching Risk Ratio and Rolling Returns');
     expect(component.slides[3].description)
-      .toBe('Sarathi helps to identify risks and assists in protecting your savings from sudden financial shocks');
+      .toBe('helps to identify risks and assists in protecting your savings from sudden financial shocks');
+    expect(component.slides.slice(1).every(({ descriptionBrand }) => descriptionBrand)).toBeTrue();
     expect(component.slides.map(({ image }) => image)).toEqual([
       'assets/hero-financial-freedom.png',
       'assets/hero-goal-based-planning-slide.jpg',
       'assets/hero-smart-selection-mutual-fund.jpg',
       'assets/hero-wealth-protection.png',
     ]);
+
+    fixture.destroy();
+  });
+
+  it('renders the brand mention in descriptions as bold plain text', () => {
+    const fixture = TestBed.createComponent(HeroComponent);
+    const component = fixture.componentInstance;
+    component.activeSlideIndex = 1;
+    fixture.detectChanges();
+
+    const description = fixture.nativeElement.querySelector('.hero-message p') as HTMLParagraphElement;
+    expect(description.querySelector('strong')?.textContent).toBe('Sarathi');
+    expect(description.querySelector('.brand-rupee')).toBeNull();
+    expect(description.textContent?.trim().startsWith('Sarathi aligns goals')).toBeTrue();
 
     fixture.destroy();
   });

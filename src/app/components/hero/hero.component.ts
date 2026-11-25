@@ -9,6 +9,7 @@ interface HeroSlide {
   image?: string;
   imageAlt?: string;
   brandPrefix?: boolean;
+  descriptionBrand?: boolean;
 }
 
 @Component({
@@ -36,23 +37,26 @@ export class HeroComponent implements OnInit, OnDestroy {
     {
       titleLead: 'Goal-based',
       titleAccent: 'Planning',
-      description: 'Sarathi aligns goals to specific life milestones rather than chasing market returns and tracking them periodically till Goal is reached',
+      description: 'aligns goals to specific life milestones rather than chasing market returns and tracking them periodically till Goal is reached',
       image: 'assets/hero-goal-based-planning-slide.jpg',
       imageAlt: 'Coins stacked beneath a target, representing goal-based planning',
+      descriptionBrand: true,
     },
     {
       titleLead: 'Smart Selection of',
       titleAccent: 'Mutual Fund',
-      description: 'Sarathi selects Mutual Fund Schemes matching your Financial Goals, Time Horizon and Risk Tolerance using a structured method of matching Risk Ratio and Rolling Returns',
+      description: 'selects Mutual Fund Schemes matching your Financial Goals, Time Horizon and Risk Tolerance using a structured method of matching Risk Ratio and Rolling Returns',
       image: 'assets/hero-smart-selection-mutual-fund.jpg',
       imageAlt: 'Financial adviser pointing to savings as a client plans investments',
+      descriptionBrand: true,
     },
     {
       titleLead: 'Wealth',
       titleAccent: 'Protection',
-      description: 'Sarathi helps to identify risks and assists in protecting your savings from sudden financial shocks',
+      description: 'helps to identify risks and assists in protecting your savings from sudden financial shocks',
       image: 'assets/hero-wealth-protection.png',
       imageAlt: 'Hands holding a rupee-marked money bag, representing wealth protection',
+      descriptionBrand: true,
     },
   ];
 

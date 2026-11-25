@@ -15,7 +15,11 @@
               <span class="brand-visual" aria-hidden="true">SA<span class="brand-rupee">₹</span>ATHI</span>
             </span>
           }
-          {{ activeSlide.description | t }}
+          @if (activeSlide.descriptionBrand) {
+            <strong>Sarathi</strong> {{ activeSlide.description | t }}
+          } @else {
+            {{ activeSlide.description | t }}
+          }
         </p>
       </div>
       <div class="hero-actions">
