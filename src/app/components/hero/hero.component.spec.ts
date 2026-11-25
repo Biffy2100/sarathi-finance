@@ -70,10 +70,17 @@ describe('HeroComponent', () => {
   it('renders the brand mention in descriptions as bold plain text', () => {
     const fixture = TestBed.createComponent(HeroComponent);
     const component = fixture.componentInstance;
-    component.activeSlideIndex = 1;
     fixture.detectChanges();
 
-    const description = fixture.nativeElement.querySelector('.hero-message p') as HTMLParagraphElement;
+    let description = fixture.nativeElement.querySelector('.hero-message p') as HTMLParagraphElement;
+    expect(description.querySelector('strong')?.textContent).toBe('Sarathi');
+    expect(description.querySelector('.brand-rupee')).toBeNull();
+    expect(description.textContent?.trim().startsWith('Sarathi helps individuals')).toBeTrue();
+    expect(fixture.nativeElement.querySelector('.hero-brand-lockup .brand-rupee')).not.toBeNull();
+
+    component.activeSlideIndex = 1;
+    fixture.detectChanges();
+    description = fixture.nativeElement.querySelector('.hero-message p') as HTMLParagraphElement;
     expect(description.querySelector('strong')?.textContent).toBe('Sarathi');
     expect(description.querySelector('.brand-rupee')).toBeNull();
     expect(description.textContent?.trim().startsWith('Sarathi aligns goals')).toBeTrue();

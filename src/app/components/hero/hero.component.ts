@@ -8,7 +8,6 @@ interface HeroSlide {
   description: string;
   image?: string;
   imageAlt?: string;
-  brandPrefix?: boolean;
   descriptionBrand?: boolean;
 }
 
@@ -32,7 +31,7 @@ export class HeroComponent implements OnInit, OnDestroy {
       description: 'helps individuals improve financial literacy, make sound decisions, and build a secure financial future through expert guidance and personalised financial planning.',
       image: 'assets/hero-financial-freedom.png',
       imageAlt: 'Financial freedom represented by a broken chain and birds at sunrise',
-      brandPrefix: true,
+      descriptionBrand: true,
     },
     {
       titleLead: 'Goal-based',

@@ -10,11 +10,6 @@
       <div class="hero-message" [class.is-sliding]="isSliding" aria-live="off" aria-atomic="true">
         <h1>{{ activeSlide.titleLead | t }}{{ activeSlide.titleAccent ? ' ' : '' }}@if (activeSlide.titleAccent) { <em>{{ activeSlide.titleAccent | t }}</em> }</h1>
         <p class="section-copy">
-          @if (activeSlide.brandPrefix) {
-            <span class="brand-name hero-brand" aria-label="Sarathi">
-              <span class="brand-visual" aria-hidden="true">SA<span class="brand-rupee">₹</span>ATHI</span>
-            </span>
-          }
           @if (activeSlide.descriptionBrand) {
             <strong>Sarathi</strong> {{ activeSlide.description | t }}
           } @else {
